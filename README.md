@@ -1,0 +1,2 @@
+# Trader
+Chart analyst
