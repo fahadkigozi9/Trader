@@ -24,7 +24,7 @@ st.header("AI Market Read")
 
 def ask_deepseek(context: str) -> str:
     client = OpenAI(
-        api_key=os.environ.get "DEEPSEEK_API_KEY",
+        api_key=os.environ.get ("DEEPSEEK_API_KEY"),
         base_url="https://api.deepseek.com",
     )
     resp = client.chat.completions.create(
