@@ -88,7 +88,7 @@ def ask_gemini(context: str) -> str:
     # Initialize the client using GEMINI_API_KEY
     client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3.5-flash",
         contents=(
             "You're reviewing a London Momentum Scalper order-block setup. "
             "Give a short read: bias (long/short/flat), confidence 0-100, "
