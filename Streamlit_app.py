@@ -52,8 +52,8 @@ def fetch_live_market_data(symbol: str = "GC=F") -> str:
 def send_telegram_alert(message: str) -> bool:
     """Pushes a markdown alert to your Telegram via BotFather API."""
     try:
-        bot_token = st.secrets["telegram"]["bot_token"]
-        chat_id = st.secrets["telegram"]["chat_id"]
+        bot_token = st.secrets["TELEGRAM_BOT_TOKEN"]
+        chat_id = st.secrets["TELEGRAM_CHAT_ID"]
         url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
         
         payload = {
