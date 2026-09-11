@@ -174,7 +174,8 @@ if st.button("Run Gemini Analysis"):
                 
                 # Forward to Telegram if enabled
                 if auto_alert:
-                    if "telegram" in st.secrets:
+                    if "TELEGRAM_BOT_TOKEN" in st.secrets and "TELEGRAM_CHAT_ID" in st.secrets:
+
                         alert_msg = f"🚨 *London Scalper Signal Alert* 🚨\n\n{analysis_result}"
                         sent = send_telegram_alert(alert_msg)
                         if sent:
